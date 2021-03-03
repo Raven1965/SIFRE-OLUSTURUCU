@@ -15,6 +15,17 @@ if [[ $1 == güncelle ]];then
 	bash güncelleme.sh güncelle
 	exit
 fi
+kontrol=$(which termux-tts-speak termux-vibrate |wc -l)
+if [[ $kontrol == 0 ]];then
+	echo
+	echo
+	echo
+	printf "\e[32m[✓]\e[97m TERMUX-APİ PAKETİ KURLUYOR"
+	echo
+	echo
+	echo
+	pkg install termux-api -y
+fi
 clear
 cd files
 bash güncelleme.sh
@@ -22,6 +33,7 @@ bash banner.sh
 echo
 echo
 echo
+termux-tts-speak -e com.google.android.tts -l en -p 0.1 -r 0.7 -s MUSIC welcome termux toolss
 printf "
 \e[31m[\e[97m1\e[31m]\e[97m ────────── \e[32mZAYIF ŞİFRE\e[97m
 
@@ -47,6 +59,7 @@ elif [[ $secim == 3 ]];then
 elif [[ $secim == x || $secim == X ]];then
 	echo
 	echo
+	termux-vibrate -d 55
 	echo
 	printf "\e[31m[!]\e[97m ÇIKIŞ YAPILDI"
 	echo
