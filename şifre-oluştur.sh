@@ -36,15 +36,12 @@ echo
 echo
 read -e -p $'\e[31m───────[ \e[97mSEÇENEK GİRİNİZ\e[31m ]───────►  \e[0m' secim
 if [[ $secim == 1 ]];then
-	cd files
 	bash zayıfşifre.sh
 	exit
 elif [[ $secim == 2 ]];then
-	cd files
 	bash normalşifre.sh
 	exit
 elif [[ $secim == 3 ]];then
-	cd files
 	bash güclüşifre.sh
 	exit
 elif [[ $secim == x || $secim == X ]];then
