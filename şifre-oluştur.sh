@@ -33,7 +33,6 @@ bash banner.sh
 echo
 echo
 echo
-termux-tts-speak -e com.google.android.tts -l en -p 0.1 -r 0.7 -s MUSIC welcome termux toolss
 printf "
 \e[31m[\e[97m1\e[31m]\e[97m ────────── \e[32mZAYIF ŞİFRE\e[97m
 
